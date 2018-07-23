@@ -1,6 +1,5 @@
 import { createApp } from './main';
-// import Vue from 'vue';
-const Vue = require('vue').default;
+import Vue from 'vue';
 
 const { app, router, store } = createApp();
 
