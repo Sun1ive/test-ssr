@@ -5,17 +5,6 @@ import { createStore } from './store';
 import { createRouter } from './router';
 import './style.css';
 
-Vue.mixin({
-  beforeMount() {
-    const { asyncData } = this.$options;
-    if (asyncData) {
-      this.$data = asyncData({
-        store: this.$store,
-        route: this.$route,
-      });
-    }
-  },
-});
 
 export function createApp() {
   const router = createRouter();
@@ -24,7 +13,6 @@ export function createApp() {
   sync(store, router);
 
   const app = new Vue({
-    el: '#app',
     router,
     store,
     render: h => h(App),
