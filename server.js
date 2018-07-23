@@ -16,7 +16,7 @@ const renderer = createBundleRenderer(serverBundle, {
   clientManifest,
 });
 
-server.use('./dist', Express.static(resolve('./dist')));
+server.use('/dist', Express.static(resolve('./dist')));
 
 server.get('*', async (req, res) => {
   const context = {

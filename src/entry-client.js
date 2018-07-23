@@ -1,4 +1,5 @@
 import { createApp } from './main';
+import Vue from 'vue';
 
 const { app, router, store } = createApp();
 
